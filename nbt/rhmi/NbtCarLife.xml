@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginApps>
+  <pluginApp applicationType="Custom" applicationWeight="201" entryButtonFocusID="32751" insertAfterFocusID="2270" insertStateID="20" text="CarLife">
+    <comment/>
+    <entryButton action="5" id="1" model="3" imageModel="4"><properties/></entryButton>
+    <actions>
+      <hmiAction id="5" target="10"/>
+      <hmiAction id="6" target="13"/>
+      <hmiAction id="7" target="14"/>
+      <raAction id="30"/>
+      <raAction id="31"/>
+      <raAction id="32"/>
+      <raAction id="33"/>
+      <raAction id="34"/>
+      <raAction id="35"/>
+      <raAction id="36"/>
+      <raAction id="37"/>
+      <raAction id="38"/>
+      <raAction id="39"/>
+    </actions>
+    <models>
+      <textIdModel id="3" textId="1"><synonyms/></textIdModel>
+      <imageIdModel id="4" imageId="55001"/>
+      <textIdModel id="20" textId="100"><synonyms/></textIdModel>
+      <textIdModel id="21" textId="120"><synonyms/></textIdModel>
+      <textIdModel id="22" textId="2"><synonyms/></textIdModel>
+      <textIdModel id="23" textId="3"><synonyms/></textIdModel>
+      <textIdModel id="24" textId="4"><synonyms/></textIdModel>
+      <textIdModel id="25" textId="5"><synonyms/></textIdModel>
+      <textIdModel id="26" textId="6"><synonyms/></textIdModel>
+      <textIdModel id="27" textId="113"><synonyms/></textIdModel>
+      <textIdModel id="28" textId="113"><synonyms/></textIdModel>
+      <textIdModel id="29" textId="113"><synonyms/></textIdModel>
+      <textIdModel id="40" textId="7"><synonyms/></textIdModel>
+      <textIdModel id="41" textId="8"><synonyms/></textIdModel>
+      <textIdModel id="42" textId="9"><synonyms/></textIdModel>
+      <textIdModel id="43" textId="140"><synonyms/></textIdModel>
+      <raDataModel id="44" modelType="Richtext"/>
+      <raDataModel id="45" modelType="Richtext"/>
+      <textIdModel id="46" textId="10"><synonyms/></textIdModel>
+      <textIdModel id="47" textId="11"><synonyms/></textIdModel>
+    </models>
+    <events>
+      <focusEvent id="50" target="11"/>
+      <focusEvent id="51" target="12"/>
+      <focusEvent id="52" target="10"/>
+      <focusEvent id="53" target="13"/>
+    </events>
+    <hmiStates>
+      <hmiState id="10" text="CarLife" textModel="3">
+        <components>
+          <label id="60" model="20" text="CarLife status"/>
+          <button id="61" action="30" model="22" text="Start connection"/>
+          <button id="62" action="31" model="23" text="Resume projection"/>
+          <button id="63" action="32" model="24" text="Force stop"/>
+          <separator id="64"/>
+          <label id="65" model="21" text="Firewall status"/>
+          <button id="66" action="33" model="25" text="Check firewall rules"/>
+          <button id="67" action="34" model="26" text="Add firewall rules"/>
+          <button id="69" action="6" model="40" text="Wi-Fi password"/>
+        </components>
+      </hmiState>
+      <hmiState id="11" parentId="10" text="CarLife" textModel="3">
+        <components><separator id="68"/></components>
+      </hmiState>
+      <hmiState id="12" parentId="10" text="Choose a phone" textModel="3">
+        <components>
+          <button id="70" action="35" model="27" text="First phone"/>
+          <button id="71" action="36" model="28" text="Second phone"/>
+          <button id="72" action="37" model="29" text="Third phone"/>
+          <button id="73" action="32" model="24" text="Force stop"/>
+        </components>
+      </hmiState>
+      <hmiState id="13" parentId="10" text="Wi-Fi password" textModel="40">
+        <components>
+          <label id="80" model="43" text="Wi-Fi password status"/>
+          <label id="81" model="44" text="Wi-Fi Direct SSID"/>
+          <label id="82" model="45" text="Password"/>
+          <button id="83" action="38" model="41" text="Show Wi-Fi password"/>
+          <button id="84" action="7" model="42" text="Reset Wi-Fi password"/>
+        </components>
+      </hmiState>
+      <hmiState id="14" parentId="13" text="Reset Wi-Fi password" textModel="42">
+        <components>
+          <label id="85" model="47" text="Connected devices will need the new password."/>
+          <button id="86" action="39" model="46" text="Confirm reset"/>
+        </components>
+      </hmiState>
+    </hmiStates>
+  </pluginApp>
+</pluginApps>

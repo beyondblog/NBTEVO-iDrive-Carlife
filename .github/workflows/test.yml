@@ -1,0 +1,31 @@
+name: Tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  host:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Run C++ host tests
+        run: sh nbt/test-host.sh
+      - name: Run offline projection demo
+        run: python3 demo.py
+      - name: Check deployment scripts
+        run: |
+          for script in nbt/*.sh; do
+            sh -n "$script" || exit 1
+          done
+      - name: Generate and check RHMI menu resources
+        run: |
+          output=$(mktemp -d)
+          python3 nbt/rhmi/resources.py "$output"
+          unzip -tq "$output/NbtCarLife_ALL_Images.zip"
+          unzip -tq "$output/NbtCarLife_ALL_Texts.zip"

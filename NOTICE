@@ -1,0 +1,9 @@
+NBTEVO iDrive Carlife+
+
+The QNX build links modules from Supra-iDrive6-Android-Auto.
+Required Notice: Copyright (c) 2026 nanaisu - NBT-AAD (https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)
+See licenses/LICENSE-SUPRA.md for the PolyForm Noncommercial 1.0.0 terms.
+See licenses/LICENSE-SPEEXDSP.txt for the bundled SpeexDSP license.
+
+See vendor/hu_lab/README.md and vendor/hu_lab/LICENSE for the vendored
+Carlife_on_box protocol and USB sources and their Apache 2.0 license.
